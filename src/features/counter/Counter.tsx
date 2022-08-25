@@ -10,6 +10,7 @@ import {
   selectCount,
 } from './counterSlice';
 import styles from './Counter.module.css';
+import { ActionCreators } from 'redux-undo';
 
 export function Counter() {
   const count = useAppSelector(selectCount);
@@ -35,6 +36,22 @@ export function Counter() {
           onClick={() => dispatch(increment())}
         >
           +
+        </button>
+      </div>
+      <div className={styles.row}>
+        <button
+          className={styles.button}
+          aria-label="Undo value"
+          onClick={() => dispatch(ActionCreators.undo())}
+        >
+          Undo
+        </button>
+        <button
+          className={styles.button}
+          aria-label="Redo value"
+          onClick={() => dispatch(ActionCreators.redo())}
+        >
+          Redo
         </button>
       </div>
       <div className={styles.row}>
