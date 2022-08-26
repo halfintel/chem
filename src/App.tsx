@@ -1,12 +1,14 @@
 import React from 'react';
 import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
+import { Counter } from './modules/counter/Counter';
 import './App.css';
+import { Link } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <Link to="/grid">Grid</Link>
         <img src={logo} className="App-logo" alt="logo" />
         <Counter />
         <p>

@@ -5,15 +5,32 @@ import { store } from './app/store';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Navigate ,
+} from "react-router-dom";
+import Grid from "./modules/grid/Grid";
+
+
+
 
 const container = document.getElementById('root')!;
 const root = createRoot(container);
 window.store = store;
 
+
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <App />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<App />} />
+          <Route path="grid" element={<Grid />} />
+          <Route path="*" element={<Navigate to ="/" />}/>
+        </Routes>
+      </BrowserRouter>
     </Provider>
   </React.StrictMode>
 );
