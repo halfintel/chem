@@ -6,35 +6,17 @@ import counterReducer, {
 } from './counterSlice';
 
 
-var a = {
-  name: 'a'
-};
-var b = {
-  name: 'b'
-};
-var c = {
-  name: 'c'
-};
-
 
 
 describe('counter reducer', () => {
   const initialState: CounterState = {
     value: 3,
     status: 'idle',
-    items: {
-      a: a,
-      b: b
-    },
   };
   it('should handle initial state', () => {
     expect(counterReducer(undefined, { type: 'unknown' })).toEqual({
       value: 0,
       status: 'idle',
-      items: {
-        a: a,
-        b: b
-      },
     });
   });
 
