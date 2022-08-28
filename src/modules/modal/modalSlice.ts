@@ -2,12 +2,25 @@ import { createSlice } from '@reduxjs/toolkit';
 import { RootState } from '../../app/store';
 
 
+export enum FieldEnum {
+  input = 'input',
+  textarea = 'textarea',
+}
+
+export enum TypeEnum {
+  string = 'string',
+  number = 'number',
+}
+
 
 export interface ModalStateItemInterface {
-  type: string,
+  field: FieldEnum,
+  type: TypeEnum,
   name: string,
+  placeholder: string,
   value: string,
   hidden: boolean,
+  required: boolean,
 }
 
 export interface ModalStateInterface {
@@ -22,10 +35,13 @@ export interface ModalStateInterface {
 
 const initialState: ModalStateInterface = {
   fields: [{
-    type: 'input',
+    field: FieldEnum.input,
+    type: TypeEnum.string,
     name: 'color',
+    placeholder: 'Color',
     value: 'red',
     hidden: false,
+    required: true,
   }],
   showModal: false,
   callback: '',

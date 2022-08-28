@@ -3,6 +3,14 @@
 }
 
 
+.input {
+  font-size: 32px;
+  padding: 5px;
+  width: 100%;
+  text-align: left;
+  border: 1px solid rgb(112, 76, 182);
+}
+
 
 .button {
   appearance: none;
@@ -16,9 +24,7 @@
   padding-bottom: 4px;
   cursor: pointer;
   background-color: rgba(112, 76, 182, 0.1);
-  border-radius: 2px;
   transition: all 0.15s;
-  margin-right: 15px;
 }
 .button:hover,
 .button:focus {
@@ -26,4 +32,8 @@
 }
 .button:active {
   background-color: rgba(112, 76, 182, 0.2);
+}
+
+.br {
+  border-radius: 3px;
 }

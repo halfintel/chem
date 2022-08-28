@@ -8,13 +8,30 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 15px;
 }
 .modal {
-  width: calc(100% - 30px);
-  height: calc(100% - 30px);
+  width: 100%;
+  max-width: 320px;
   background-color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.inputWrapper {
+  width: 100%;
+  margin-top: 15px;
+}
+.inputWrapper:first-child {
+  margin-top: 0;
+}
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  width: 100%;
 }
