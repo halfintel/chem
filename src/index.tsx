@@ -12,6 +12,8 @@ import {
   Navigate ,
 } from "react-router-dom";
 import Grid from "./modules/grid/Grid";
+import Modal from "./modules/modal/Modal";
+
 
 
 
@@ -31,6 +33,7 @@ root.render(
           <Route path="*" element={<Navigate to ="/" />}/>
         </Routes>
       </BrowserRouter>
+      <Modal />
     </Provider>
   </React.StrictMode>
 );

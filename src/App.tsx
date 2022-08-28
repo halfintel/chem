@@ -1,6 +1,5 @@
 import React from 'react';
 import logo from './logo.svg';
-import { Counter } from './modules/counter/Counter';
 import './App.css';
 import { Link } from "react-router-dom";
 
@@ -10,7 +9,6 @@ function App() {
       <header className="App-header">
         <Link to="/grid">Grid</Link>
         <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>

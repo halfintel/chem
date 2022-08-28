@@ -1,13 +1,14 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { RootState } from '../../app/store';
+import { ModalStateItemInterface } from '../modal/modalSlice';
 
 
-interface GridStateItem {
+
+interface GridStateItemInterface {
   id: number; value: string; color: string;
 }
-
-export interface GridState {
-  items: Array<Array<GridStateItem>>
+export interface GridStateInterface {
+  items: Array<Array<GridStateItemInterface>>,
 }
 
 
@@ -17,7 +18,7 @@ let rawItemsData = [
   {id: 3, x: 3, y: 3},
 ];
 
-let items:Array<Array<GridStateItem>> = [];
+let items:Array<Array<GridStateItemInterface>> = [];
 for (let x = 0; x < 10; x++){
   items[x] = [];
   for (let y = 0; y < 10; y++){
@@ -36,7 +37,7 @@ for (let key in rawItemsData){
 
 
 
-const initialState: GridState = {
+const initialState: GridStateInterface = {
   items: items,
 };
 
@@ -45,18 +46,37 @@ export const gridSlice = createSlice({
   name: 'grid',
   initialState,
   reducers: {
-    gridClick: (state, data) => {
+    gridModalSaveClick: (state, data) => {
       let payload = data.payload;
-      state.items[payload.row][payload.column].color = 'red';
+      let saveData = {
+        column: -1,
+        row: -1,
+        color: 'grey',
+      };
+      for (let key in payload.fields){
+        let field:ModalStateItemInterface = payload.fields[key];
+        let name = field.name;
+        let value = field.value;
+        
+        switch(name) {
+          case 'column':
+            saveData.column = parseInt(value);
+            break;
+          case 'row':
+            saveData.row = parseInt(value);
+            break;
+          case 'color':
+            saveData.color = value;
+            break;
+        }
+      }
+      state.items[saveData.row][saveData.column].color = saveData.color;
     },
   },
-
 });
 
-export const { gridClick } = gridSlice.actions;
 
+
+export const { gridModalSaveClick } = gridSlice.actions;
 export const getItems = (state: RootState) => state.grid.present.items;
-
-
-
 export default gridSlice.reducer;
