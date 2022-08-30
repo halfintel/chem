@@ -9,3 +9,5 @@ before this project I never used:
 - react-color
 - typescript
 - gh-pages
+
+ps: development time - 1 week
