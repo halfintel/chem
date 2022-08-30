@@ -25,6 +25,13 @@
   font-size: 20px;
   font-weight: 700;
 }
+.itemSpan {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .grey {
   background-color: rgba(0,0,0,0.05);
 }

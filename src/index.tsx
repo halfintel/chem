@@ -2,11 +2,10 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { Provider } from 'react-redux';
 import { store } from './app/store';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
 import {
-  BrowserRouter,
+  HashRouter,
   Routes,
   Route,
   Navigate ,
@@ -26,13 +25,11 @@ window.store = store;
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <BrowserRouter basename="/chem/">
+      <HashRouter>
         <Routes>
-          <Route path="/" element={<App />} />
-          <Route path="grid" element={<Grid />} />
-          <Route path="*" element={<Navigate to ="/" />}/>
+          <Route path='/' element={<Grid />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
       <Modal />
     </Provider>
   </React.StrictMode>

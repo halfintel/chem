@@ -50,9 +50,9 @@ function Grid() {
               ))} >
                 {item.id !== -1 ? (
                   <div className={styles.itemParamsWrapper}>
-                    <span className={styles.itemShortName}>{item.shortName}</span>
-                    <span>{item.name}</span>
-                    <span>{item.atomicMass}</span>
+                    <span className={styles.itemSpan + ' ' + styles.itemShortName}>{item.shortName}</span>
+                    <span className={styles.itemSpan}>{item.name}</span>
+                    <span className={styles.itemSpan}>{item.atomicMass}</span>
                   </div>
                 ) : (
                   <div></div>
