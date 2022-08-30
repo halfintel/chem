@@ -1,7 +1,7 @@
 ## This is a demonstration of my skills (search for and learn new technologies)
 Livedemo - https://halfintel.github.io/chem/
 
-before this project i don't used:
+before this project I never used:
 - redux
 - redux toolkit
 - react-router
