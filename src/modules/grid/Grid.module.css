@@ -1,0 +1,55 @@
+.table {
+
+}
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  overflow: scroll;
+}
+.tr {
+  display: flex;
+}
+.item {
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  border: 1px solid rgba(0,0,0,0.03);
+  flex: 0 0 auto;
+  padding: 10px;
+}
+.itemParamsWrapper {
+  display: flex;
+  flex-direction: column;
+}
+.itemShortName {
+  font-size: 20px;
+  font-weight: 700;
+}
+.itemSpan {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.grey {
+  background-color: rgba(0,0,0,0.05);
+}
+.red {
+  background-color: rgba(255,0,0,0.2);
+}
+.blue {
+  background-color: rgba(0,0,255,0.2);
+}
+.white {
+  background-color: rgba(0,0,0,0.03);
+}
+
+.buttons {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+.button {
+  margin-right: 15px;
+}

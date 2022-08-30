@@ -1,11 +1,16 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
+import gridReducer from '../modules/grid/gridSlice';
+import modalReducer from '../modules/modal/modalSlice';
+import undoable from 'redux-undo';
+
 
 export const store = configureStore({
   reducer: {
-    counter: counterReducer,
+    grid: undoable(gridReducer),
+    modal: modalReducer,
   },
 });
+
 
 export type AppDispatch = typeof store.dispatch;
 export type RootState = ReturnType<typeof store.getState>;

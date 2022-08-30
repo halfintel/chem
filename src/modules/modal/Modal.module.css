@@ -1,0 +1,37 @@
+.modalWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+.modal {
+  width: 100%;
+  max-width: 320px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.inputWrapper {
+  width: 100%;
+  margin-top: 15px;
+}
+.inputWrapper:first-child {
+  margin-top: 0;
+}
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  width: 100%;
+}
