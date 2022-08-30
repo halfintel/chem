@@ -26,7 +26,7 @@ window.store = store;
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <BrowserRouter>
+      <BrowserRouter basename="/chem/">
         <Routes>
           <Route path="/" element={<App />} />
           <Route path="grid" element={<Grid />} />
