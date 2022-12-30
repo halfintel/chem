@@ -1,7 +1,7 @@
 ## This is a demonstration of my skills
 Livedemo - https://halfintel.github.io/chem/
 
-before this project I never used:
+Stack:
 - redux
 - redux toolkit
 - react-router
@@ -10,4 +10,4 @@ before this project I never used:
 - typescript
 - gh-pages
 
-ps: development time - 1 week
+Development time - 1 week
