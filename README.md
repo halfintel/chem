@@ -1,4 +1,4 @@
-## This is a demonstration of my skills (search for and learn new technologies)
+## This is a demonstration of my skills
 Livedemo - https://halfintel.github.io/chem/
 
 before this project I never used:
